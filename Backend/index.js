@@ -20,6 +20,9 @@ app.use(cors({
 app.use('/user',userRouter);
 app.use('/post',postRouter);
 app.use('/conversation',consverSationRoutr);
+app.get("/health-check",(req,res)=>{
+  return  res.send("server is live")
+})
 const port = process.env.PORT || 3000;
 app.listen(port, async () => {
     try {
