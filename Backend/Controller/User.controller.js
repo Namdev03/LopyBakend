@@ -10,6 +10,7 @@ import cloudinary from "../Utils/Cloudinary.js";
 const cookieOptions = {
     httpOnly: true,
     sameSite: 'None',
+    secure:true,
     maxAge: 1 * 24 * 60 * 60 * 1000
 };
 export const registerUser = async (req, res) => {
